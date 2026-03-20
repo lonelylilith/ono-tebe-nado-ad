@@ -1,192 +1,119 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
+    <title>Посмотри в окно</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/style.css" />
-</head>
-<body>
-    <header class="header">
-        <nav class="header_menu">
-            <ul class="header_menu-list">
-                <li class="header_menu-item_active">
-                    <a class="header_menu-link menu-link_active">главная</a>
-                </li>
-                <li>
-                    <a class="header_menu-link" href="#0">посмотреть лоты</a>
-                </li>
-                <li>
-                    <a class="header_menu-link" href="#0">об аукционе</a>
-                </li>
-            </ul>
-        </nav>
-        <a class="header_logo">
-            <img class="header_img-logo" src="./images/logo-black.svg" alt="Логотип" />
-        </a>
-        <address class="address header_address">
-            <ul class="address-list">
-                <li>
-                    <a class="address-link" href="tel:+99995555555">+9 999 555 5555</a>
-                </li>
-                <li>
-                    <a class="address-link" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-                </li>
-                <li>наб. Принсенграхт 263- 265, Амстердам</li>
-            </ul>
-        </address>
-    </header>
-
-    <main>
-        <section class="cover">
-            <div class="overlay"></div>
-            <h1 class="cover_title">
-                <span class="cover_title-text">Оно</span>
-                <span class="cover_title-text cover_title-text_center">тебе</span>
-                <span class="cover_title-text cover_title-text_right">
-                    над<span class="spacing">о</span>
-                </span>
-            </h1>
-            <div class="cover_description">
-                <p class="cover_description-text">
-                    Аукцион вещей, в которые никто не верил
-                </p>
-                <button type="button" class="bet-button">Сделать ставку</button>
+    <link rel="stylesheet" href="./styles/preloader.css" />
+    <link rel="stylesheet" href="./styles/error.css" />
+  </head>
+  <body class="page">
+    <main class="content">
+      <section class="result">
+        <div class="result__video-container">
+          <video src="" controls class="result__video" poster=""></video>
+        </div>
+        <form class="search-form">
+          <fieldset class="search-form__fieldset">
+            <h2 class="search-form__fieldset-title">Город</h2>
+            <label class="search-form__label">
+              <span class="search-form__label-text visually-hidden">Город</span>
+              <input
+                type="text"
+                placeholder="Санкт Петербург, например"
+                name="city"
+                class="search-form__textfield"
+              />
+            </label>
+          </fieldset>
+          <fieldset class="search-form__fieldset">
+            <h2 class="search-form__fieldset-title">Время суток</h2>
+            <div class="search-form__checkbox-list">
+              <label class="search-form__label">
+                <input
+                  type="checkbox"
+                  name="time"
+                  value="morning"
+                  class="search-form__checkbox visually-hidden"
+                />
+                <span class="search-form__pseudo-checkbox"></span>
+                <span class="search-form__label-text">Утро</span>
+              </label>
+              <label class="search-form__label">
+                <input
+                  type="checkbox"
+                  name="time"
+                  value="afternoon"
+                  class="search-form__checkbox visually-hidden"
+                />
+                <span class="search-form__pseudo-checkbox"></span>
+                <span class="search-form__label-text">День</span>
+              </label>
+              <label class="search-form__label">
+                <input
+                  type="checkbox"
+                  name="time"
+                  value="night"
+                  class="search-form__checkbox visually-hidden"
+                />
+                <span class="search-form__pseudo-checkbox"></span>
+                <span class="search-form__label-text">Ночь</span>
+              </label>
             </div>
-        </section>
-
-        <section class="lots">
-            <h2 class="lots_heading">Лоты</h2>
-            <ul class="lots_card-list">
-                <li class="lots_card-list-item">
-                    <a class="card-link" href="#0">
-                        <article class="card card_type_film">
-                            <div class="overlay"></div>
-                            <h3 class="card_title">Фильм режиссёра, который бросил киношколу</h3>
-                            <p class="card_text">
-                                Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
-                                ставка, если бы вы не знали, что режиссёр — Пол Томас
-                                Андерсон?
-                            </p>
-                        </article>
-                    </a>
-                </li>
-                <li class="lots_card-list-item">
-                    <a class="card-link" href="#0">
-                        <article class="card card_type_book">
-                            <div class="overlay"></div>
-                            <h3 class="card_title">
-                                Книга, где описан один скучный день из жизни рекламного агента
-                            </h3>
-                            <p class="card_text">
-                                Объёмом почти в тысячу страниц. Иногда без знаков препинания и
-                                с переходами на древнеанглийский. В ней одновременно
-                                рассказывается о 16 июня 1904 года и об истории литературы,
-                                начиная с античных времён. И это всё накладывается на
-                                эпическую поэму Гомера. Сколько бы вы поставили на «Улисса» Джеймса Джойса?
-                            </p>
-                        </article>
-                    </a>
-                </li>
-                <li class="lots_card-list-item">
-                    <a class="card-link" href="#0">
-                        <article class="card card_type_picture">
-                            <div class="overlay"></div>
-                            <h3 class="card_title">
-                                Картина, которую повторит даже 5-летний сын маминой подруги
-                            </h3>
-                            <p class="card_text">
-                                Ну действительно, там линия, тут кружочек, а здесь и вовсе
-                                что-то похожее на инфузорию-туфельку. Никаких полей, лесов,
-                                котиков... Сколько бы вы на такое поставили, если бы не знали,
-                                что это — одна из революционных работ Кандинского?
-                            </p>
-                        </article>
-                    </a>
-                </li>
-            </ul>
-            <a class="lots_look-more-link" href="#0">посмотреть больше</a>
-        </section>
-
-        <section class="about">
-            <div class="about_column">
-                <div class="about_logo">
-                    <div class="about_logo-background">
-                        <img class="about_logo-image" src="./images/logo-white.svg" alt="Логотип" />
-                    </div>
-                </div>
-                <h2 class="about_title">Об аукционе</h2>
-                <div class="about_text">
-                    <p>
-                        Здесь вы не встретите очередное пафосное собрание невероятно
-                        дорогого антиквариата. Наши лоты вообще не должны были попасть ни
-                        на один аукцион. Потому что кому нужен дневник девочки-подростка
-                        или картина, которую может нарисовать даже ребёнок? Кому нужны все
-                        эти странные вещи, созданные любителями?
-                    </p>
-                    <p>
-                        Слишком сложные или, наоборот, слишком простые. Опережающие своё
-                        время. В пух и прах растерзанные критиками. Непринятые и
-                        непонятые. Когда-то они казались просто неудачными. Но, несмотря
-                        на критику, кажущуюся простоту или сложность, сейчас без этих
-                        лотов невозможно представить современную культуру. Когда в эти
-                        вещи не верил никто, продолжали верить их создатели. И сейчас эти
-                        лоты стали культовыми.
-                    </p>
-                </div>
-            </div>
-        </section>
+          </fieldset>
+          <button type="submit" class="button search-form__submit-button">
+            Найти
+          </button>
+        </form>
+      </section>
+      <section class="content__details">
+        <h1 class="title">
+          <span class="content__accent">По-</span><br />смотри<br />в окно
+        </h1>
+        <ul class="content__list">
+          <!-- ЗДЕСЬ ОКАЖУТСЯ ТЕМПЛЕЙТЫ КАРТОЧЕК -->
+        </ul>
+      </section>
     </main>
 
-    <footer class="footer">
-        <address class="address">
-            <ul class="address-list">
-                <li>
-                    <a class="address-link" href="tel:+99995555555">+9 999 555 5555</a>
-                </li>
-                <li>
-                    <a class="address-link" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-                </li>
-                <li>наб. Принсенграхт 263- 265, Амстердам</li>
-            </ul>
-        </address>
+    <!-- ТЕМПЛЕЙТЫ -->
 
-        <nav>
-            <ul class="footer_menu-list">
-                <li>
-                    <a class="footer_menu-link menu-link_active">главная</a>
-                </li>
-                <li>
-                    <a class="footer_menu-link" href="#0">посмотреть лоты</a>
-                </li>
-                <li>
-                    <a class="footer_menu-link" href="#0">об аукционе</a>
-                </li>
-            </ul>
-        </nav>
-
-        <div>
-            <ul class="footer_social-list">
-                <li class="footer_social-list-item">
-                    <a target="_blank" href="#0">
-                        <img class="footer_social-icon" src="./images/yt.svg" alt="YouTube" />
-                    </a>
-                </li>
-                <li class="footer_social-list-item">
-                    <a target="_blank" href="#0">
-                        <img class="footer_social-icon" src="./images/vk.svg" alt="Вконтакте" />
-                    </a>
-                </li>
-                <li class="footer_social-list-item">
-                    <a target="_blank" href="#0">
-                        <img class="footer_social-icon" src="./images/pinterest.svg" alt="Pinterest" />
-                    </a>
-                </li>
-            </ul>
+    <template class="preloader-template">
+      <div class="preloader">
+        <div class="preloader-chasing-squares">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
         </div>
-    </footer>
-</body>
+      </div>
+    </template>
+
+    <template class="cards-list-item-template">
+      <li class="content__list-item">
+        <a href="#0" class="content__card-link">
+          <article class="content__video-card">
+            <div class="content__video-card-description-container">
+              <h2 class="content__video-card-title"></h2>
+              <p class="content__video-card-description"></p>
+            </div>
+            <img src="" alt="" class="content__video-card-thumbnail" />
+          </article>
+        </a>
+      </li>
+    </template>
+    <template class="more-button-template">
+      <li><button class="button more-button">Показать еще</button></li>
+    </template>
+
+    <template class="error-template">
+      <div class="error">
+        <h2 class="error__title"></h2>
+      </div>
+    </template>
+    <script src="./scripts/script.js"></script>
+  </body>
 </html>
