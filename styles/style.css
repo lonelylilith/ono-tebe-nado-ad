@@ -191,7 +191,22 @@
     min-height: 596px;
 }
 
+.card-link {
+    height: 100%;
+    text-decoration: none;
+    display: block;
+}
 
+.card {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
 
     .card .overlay {
         z-index: 0;
